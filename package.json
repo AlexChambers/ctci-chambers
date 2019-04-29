@@ -1,6 +1,6 @@
 {
   "name": "ctci-chambers",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Implementations of various problems from Gayle McDowell's \"Cracking the Coding Interview\"",
   "main": "index.js",
   "scripts": {
