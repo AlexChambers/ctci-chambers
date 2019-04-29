@@ -7,6 +7,7 @@
     "test": "jest"
   },
   "author": "Alex Chambers <alexchambers91@gmail.com> (http://alexchambers.me)",
+  "homepage": "https://github.com/AlexChambers/ctci-chambers#readme",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
