@@ -1,7 +1,7 @@
 {
   "name": "ctci-chambers",
   "version": "1.0.4",
-  "description": "Implementations of various problems from Gayle McDowell's \"Cracking the Coding Interview\"",
+  "description": "A node module containing solutions to Cracking the Coding Interview by Gayle McDowell",
   "main": "index.js",
   "scripts": {
     "test": "jest"
