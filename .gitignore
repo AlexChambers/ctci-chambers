@@ -1,0 +1,7 @@
+# Files
+package-lock.json
+*.js
+
+# Directories
+_archive/
+node_modules/
