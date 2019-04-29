@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/ctci-chambers.svg)](https://badge.fury.io/js/ctci-chambers)
+
 # ctci-chambers
 
 A node module containing solutions to _[Cracking the Coding Interview](http://www.crackingthecodinginterview.com/)_ by Gayle McDowell.
