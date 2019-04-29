@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/ctci-chambers.svg)](https://badge.fury.io/js/ctci-chambers)
+
 # ctci-chambers
 
 A node module containing solutions to _[Cracking the Coding Interview](http://www.crackingthecodinginterview.com/)_ by Gayle McDowell.
@@ -10,8 +12,7 @@ A node module containing solutions to _[Cracking the Coding Interview](http://ww
 
 ## Example
 
-```
-// index.js
+```javascript
 const ctci = require('ctci-chambers');
 
 console.log(ctci.isPalindromePermutation('race car')); // true
@@ -22,9 +23,10 @@ console.log(ctci.isPalindromePermutation('nope')); // false
 
 Tests are written using Jest. Install the project dependencies first, then run the tests.
 
-> `npm install`
-
-> `npm test`
+```bash
+npm install
+npm test
+```
 
 # API
 
