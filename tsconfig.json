@@ -62,6 +62,6 @@
     /* Custom Options */
     "watch": true /* Run the compiler in watch mode. Watch input files and trigger recompilation on changes. */
   },
-  "include": ["main.ts", "src", "tests"],
+  "include": ["index.ts", "src", "test"],
   "exclude": ["node_modules", ".vscode", "_archive"]
 }

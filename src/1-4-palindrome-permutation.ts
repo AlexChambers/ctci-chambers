@@ -1,4 +1,4 @@
-export default function isPalindromePermutation(input: string): boolean {
+module.exports = (input: string): boolean => {
   if (typeof input !== 'string') {
     console.error(`Expected a string but received '${typeof input}'`);
     return false;
@@ -28,4 +28,4 @@ export default function isPalindromePermutation(input: string): boolean {
   }
 
   return true;
-}
+};

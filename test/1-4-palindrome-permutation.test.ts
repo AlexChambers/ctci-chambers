@@ -1,5 +1,5 @@
-import isPalindromePermutation from '../src/1-4-palindrome-permutation';
-const jest = require('jest');
+const isPalindromePermutation = require('../src/1-4-palindrome-permutation');
+
 test('return true if input string is empty', () => {
   expect(isPalindromePermutation('')).toBe(true);
 });
