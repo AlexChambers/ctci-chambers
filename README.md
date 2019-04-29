@@ -33,7 +33,7 @@ Tests are written using Jest. Install the project dependencies first, then run t
 - Chapter 1: Arrays and Strings:
   - [ctci.isPalindromePermutation](#isPalindromePermutation)
 
-## isPalindromePermutation
+### isPalindromePermutation
 
 Returns true if the input string is a permutation of a palindrome.
 
