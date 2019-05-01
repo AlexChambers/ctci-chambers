@@ -33,13 +33,39 @@ npm test
 ## Methods
 
 - Chapter 1: Arrays and Strings:
-  - [ctci.isPalindromePermutation](#isPalindromePermutation)
+  - [isUnique](#isUnique)
+  - [isPermutation](#isPermutation)
+  - [isPalindromePermutation](#isPalindromePermutation)
+
+### isUnique
+
+Returns `true` if the input string contains all unique characters, `false` otherwise.
+
+```javascript
+ctci.isUnique('phrase');
+```
+
+When the optional second parameter is set to `true`, the function is permitted to use a dictionary during execution.
+
+```javascript
+ctci.isUnique('phrase', true);
+```
+
+### isPermutation
+
+Returns `true` if the first string input is a permutation of the second string input, `false` otherwise.
+
+```javascript
+ctci.isPermutation('taco cat', 'cat coat');
+```
 
 ### isPalindromePermutation
 
-Returns true if the input string is a permutation of a palindrome.
+Returns `true` if the input string is a permutation of a palindrome, `false` otherwise.
 
-    ctci.isPalindromePermutation(phrase);
+```javascript
+ctci.isPalindromePermutation('racecar');
+```
 
 ### Notes
 
