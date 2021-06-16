@@ -1,3 +1,5 @@
 # Files
+*.ts
+!*.d.ts
 jest.config.js
 tsconfig.js
