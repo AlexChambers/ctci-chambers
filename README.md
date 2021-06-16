@@ -2,7 +2,7 @@
 
 # ctci-chambers
 
-Typescript implementation of the solutions to _[Cracking the Coding Interview](http://www.crackingthecodinginterview.com/)_ by Gayle McDowell.
+A Typescript implementation of the solutions to _[Cracking the Coding Interview](http://www.crackingthecodinginterview.com/)_ by Gayle McDowell.
 
 # Setup
 
@@ -12,11 +12,22 @@ Typescript implementation of the solutions to _[Cracking the Coding Interview](h
 
 ## Usage
 
+Import the entire package:
+
 ```javascript
-import ctci from 'ctci-chambers';
+import * as ctci from 'ctci-chambers';
 
 console.log(ctci.isPalindromePermutation('race car')); // true
-console.log(ctci.isPalindromePermutation('nope')); // false
+console.log(ctci.isPalindromePermutation('nope'));     // false
+```
+
+Import only the desired functions:
+
+```javascript
+import { isPalindromePermutation } from 'ctci-chambers';
+
+console.log(isPalindromePermutation('race car')); // true
+console.log(isPalindromePermutation('nope'));     // false
 ```
 
 ## Test
