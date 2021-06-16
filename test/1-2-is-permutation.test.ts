@@ -1,4 +1,4 @@
-import { isPermutation } from '../src/1-2-is-permutation';
+import { isPermutation } from '../lib/1-2-is-permutation';
 
 test('return true if first input string is a permutation of the second input string', () => {
   expect(isPermutation('abc', 'abc')).toBe(true);

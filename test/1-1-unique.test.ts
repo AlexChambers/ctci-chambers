@@ -1,4 +1,4 @@
-import { isUnique, CHAR_SPACE } from '../src/1-1-unique'
+import { isUnique, CHAR_SPACE } from '../lib/1-1-unique'
 
 test('return true if string is empty', () => {
   expect(isUnique('')).toBe(true);

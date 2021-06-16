@@ -1,4 +1,4 @@
-import {isPalindromePermutation} from '../src/1-4-palindrome-permutation';
+import {isPalindromePermutation} from '../lib/1-4-palindrome-permutation';
 
 test('return true if input string is empty', () => {
   expect(isPalindromePermutation('')).toBe(true);
