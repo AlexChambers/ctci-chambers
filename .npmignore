@@ -1,4 +1,3 @@
 # Files
-*.ts
 jest.config.js
 tsconfig.js
