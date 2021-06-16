@@ -1,4 +1,4 @@
-module.exports = (input: string): boolean => {
+export function isPalindromePermutation(input: string): boolean {
   if (typeof input !== 'string') {
     console.error(`Expected a string but received '${typeof input}'`);
     return false;

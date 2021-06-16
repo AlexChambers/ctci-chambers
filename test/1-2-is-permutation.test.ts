@@ -1,4 +1,5 @@
-const isPermutation = require('../src/1-2-is-permutation');
+import { isPermutation } from '../src/1-2-is-permutation';
+
 test('return true if first input string is a permutation of the second input string', () => {
   expect(isPermutation('abc', 'abc')).toBe(true);
   expect(isPermutation('race car', 'car race')).toBe(true);

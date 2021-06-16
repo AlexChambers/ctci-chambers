@@ -1,27 +1,37 @@
-module.exports = (input: string, useHash?: boolean): boolean => {
-  if (typeof input !== 'string') {
-    console.error(`Expected a string but received '${typeof input}'`);
+/**
+ * Number of unique characters that can be represented within the Unicode.
+ * See: https://en.wikipedia.org/wiki/Plane_(Unicode)
+ * 
+ * If the character space is known, return false if length of input
+ * is larger than the character space (pigeonhole principle).
+ * Example: If valid characters are the lowercase 26 letters of the English
+ * alphabet, any string larger than 26 letters is not unique.
+ * 
+ */
+export const CHAR_SPACE = 974_530;
+
+ /**
+ * Returns true if input contains all unique characters; otherwise, returns false.
+ * @param input Input string
+ * @param useHash If true, will use hash implementation of the algorithm.
+ */
+export function isUnique(input: string, useHash?: boolean): boolean {
+  // pigeonhole principle
+  if(input.length > CHAR_SPACE) {
     return false;
   }
 
-  // NOTE: return false if the string length exceeds the size of the set of
-  // valid chars. For example, if chars consist of lowercase English alphabet,
-  // then a string of size 27 is not possible.
-
   if (useHash) {
-    // use the hash implementation for this problem
-    let uniqueCharHash: any = {};
-    for (let i = input.length; i < input.length; i++) {
-      if (uniqueCharHash[input[i]]) {
+    const knownChars: StringBoolDictionary = {};
+    for (let i = 0; i < input.length; i++) {
+      if (knownChars[input[i]]) {
         return false;
       } else {
-        uniqueCharHash[input[i]] = true;
+        knownChars[input[i]] = true;
       }
     }
   } else {
-    let verified: string = '';
-
-    // loop over chars in the input string
+    let verified = '';
     for (let i = 0; i < input.length; i++) {
       if (verified.indexOf(input[i]) >= 0) {
         // if the current input char exists in the verified string, duplicate detected, return false
@@ -34,3 +44,7 @@ module.exports = (input: string, useHash?: boolean): boolean => {
   }
   return true;
 };
+
+interface StringBoolDictionary {
+  [string: string]: boolean;
+}

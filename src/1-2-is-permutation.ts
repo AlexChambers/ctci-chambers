@@ -1,36 +1,34 @@
-module.exports = (first: string, second: string): boolean => {
-  if (typeof first !== 'string' || typeof second !== 'string') {
-    console.error(`Expected "string, string" as input but received "${typeof first}, ${typeof second}"`);
+export function isPermutation(firstString: string, secondString: string): boolean {
+  if (firstString.length !== secondString.length) {
     return false;
   }
 
-  if (first.length !== second.length) {
-    return false;
+  const charHash: StringNumberDictionary = {};
+
+  // track char count of first string in dictionary
+  for (let i = 0; i < firstString.length; i++) {
+    const char = firstString[i];
+    const count = charHash[char];
+    charHash[char] = count ? count + 1 : 1;
   }
 
-  // init dictionary
-  let charHash: any = {};
-
-  // track char count in dictionary
-  for (let i = 0; i < first.length; i++) {
-    if (charHash[first[i]]) {
-      charHash[first[i]] += 1;
+  // check secont string against char dictionarys
+  for (let j = 0; j < secondString.length; j++) {
+    const char = secondString[j];
+    if (charHash[char]) {
+      charHash[char] -= 1;
     } else {
-      charHash[first[i]] = 1;
-    }
-  }
-
-  // compare dictionary with second string
-  for (let j = 0; j < second.length; j++) {
-    if (charHash[second[j]]) {
-      charHash[second[j]] -= 1;
-      if (charHash[second[j]] < 0) {
-        return false; // extra character in second string
-      }
-    } else {
+      /** Either:
+       * 1) char not seen before, or 
+       * 2) second string contains more occurrences of char
+       */
       return false;
     }
   }
 
   return true;
 };
+
+interface StringNumberDictionary {
+  [string: string]: number;
+}
