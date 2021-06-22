@@ -2,7 +2,7 @@
   "name": "ctci-chambers",
   "author": "Alex Chambers <alexchambers91@gmail.com> (http://alexchambers.me)",
   "homepage": "https://github.com/AlexChambers/ctci-chambers",
-  "version": "2.0.4",
+  "version": "2.1.0",
   "license": "ISC",
   "description": "A Typescript implementation of the solutions to Cracking the Coding Interview by Gayle McDowell",
   "keywords": [
