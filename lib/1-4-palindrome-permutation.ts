@@ -1,3 +1,7 @@
+/**
+ * Determines whether the string is a permutation of a palindrome, returning true or false as appropriate.
+ * @param input Input string.
+ */
 export function isPalindromePermutation(input: string): boolean {
   if (typeof input !== 'string') {
     console.error(`Expected a string but received '${typeof input}'`);
