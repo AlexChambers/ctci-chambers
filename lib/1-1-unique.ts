@@ -11,7 +11,7 @@
 export const CHAR_SPACE = 974_530;
 
  /**
- * Returns true if input contains all unique characters; otherwise, returns false.
+ * Determines whether the string contains all unique characters, returning true or false as appropriate.
  * @param input Input string
  * @param useHash If true, will use hash implementation of the algorithm.
  */

@@ -17,18 +17,27 @@ Import the entire package:
 ```javascript
 import * as ctci from 'ctci-chambers';
 
-console.log(ctci.isPalindromePermutation('race car')); // true
-console.log(ctci.isPalindromePermutation('nope'));     // false
+ctci.isPalindromePermutation('race car'); // true
+ctci.isPalindromePermutation('nope');     // false
 ```
 
-Import only the desired functions:
+or, import only the desired functions:
 
 ```javascript
 import { isPalindromePermutation } from 'ctci-chambers';
 
-console.log(isPalindromePermutation('race car')); // true
-console.log(isPalindromePermutation('nope'));     // false
+isPalindromePermutation('race car'); // true
+isPalindromePermutation('nope');     // false
 ```
+
+## API Overview
+
+- Chapter 1: Arrays and Strings:
+  - `isUnique`
+  - `isPermutation`
+  - `urlify`
+  - `isPalindromePermutation`
+
 
 ## Test
 
@@ -39,47 +48,11 @@ npm install
 npm test
 ```
 
-# API
+## Why?
 
-- [Chapter 1: Arrays and Strings](#chapter-1-arrays-and-strings):
-  - [isUnique](#isunique)
-  - [isPermutation](#ispermutation)
-  - [isPalindromePermutation](#ispalindromepermutation)
+I had two goals in mind:
 
-## Chapter 1: Arrays and Strings
+1. Deploy a package to npm.
+2. Solve all the questions in _Cracking the Coding Interview_.
 
-### `isUnique`
-
-Returns `true` if the input string contains all unique characters, `false` otherwise.
-
-```javascript
-ctci.isUnique('abc');         // true
-ctci.isUnique('lorem ipsum'); // false
-```
-
-When the optional second parameter is set to `true`, the function is permitted to use a dictionary during execution.
-
-```javascript
-ctci.isUnique('abc', true); // true
-```
-
-### `isPermutation`
-
-Returns `true` if the first string input is a permutation of the second string input, `false` otherwise.
-
-```javascript
-ctci.isPermutation('taco', 'coat'); // true
-ctci.isPermutation('taxi', 'tuna'); // false
-```
-
-### `isPalindromePermutation`
-
-Returns `true` if the input string is a permutation of a palindrome, `false` otherwise.
-
-- **palindrome**: a word or phrase that is the same forwards and backwards.
-- **permutation**: a rearrangement or "scrambling" of letters.
-
-```javascript
-ctci.isPalindromePermutation('racecar'); // true
-ctci.isPalindromePermutation('code'); // false
-```
+It was a way to also practice [semantic versioning](https://semver.org/), documentation, commit messages, TDD, and more.
